@@ -14,7 +14,7 @@ class ChatConsummer(AsyncWebsocketConsumer):
         self.room_name = self.scope['url_route']['kwargs']['room_name']
         self.room_group_name = f'chat_{self.room_name}'
         self.user = self.scope['user']
-        
+
         if not self.user.is_authenticated:
             await self.close()
             return
@@ -33,8 +33,6 @@ class ChatConsummer(AsyncWebsocketConsumer):
 
         if self.room:
             messages = await self.get_message_history(self.room_name)
-
-            print('here')
 
             await self.send(text_data=json.dumps({
                 'type': 'chat_history',
@@ -57,7 +55,6 @@ class ChatConsummer(AsyncWebsocketConsumer):
         sender_id = int(data['id'])
 
         sender = await User.objects.aget(pk=sender_id)
-        # Send message to room group
 
         room = await ChatRoom.objects.aget(name=self.room_name)
         chat_message = await Messages.objects.acreate(
