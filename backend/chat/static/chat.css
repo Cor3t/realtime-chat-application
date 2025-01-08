@@ -1,0 +1,20 @@
+#main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.chat-container {
+    display: flex;
+    height: Calc(100vh - 50px);
+    border-radius: 20pxc;
+}
+
+.side-list-chats {
+    width: 25%;
+    background-color: black;
+}
+
+.chat-main {
+    width: 75%;
+    background-color: blue;
+}

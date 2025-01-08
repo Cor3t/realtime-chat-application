@@ -1,0 +1,155 @@
+:root {
+
+  --chat-bg-color: #555555
+}
+
+#root {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  height: 100vh;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+.main {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+}
+
+.chat-container{
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.chat-side-list {
+  width: 25%;
+  height: 100%;
+  background-color: var(--chat-bg-color);
+  text-align: left;
+  padding: 0px 20px;
+  padding-right: 0px;
+
+}
+
+.chat-screen {
+  width: 75%;
+  height: 100%;
+  background-color: var(--chat-bg-color);
+}
+
+.chat-list {
+  padding: 0px;
+  overflow: auto;
+  height: 100%;
+  scroll-behavior: unset;
+  margin: 0px;
+}
+
+.chat-side-list .chat-side-title {
+  height: 10%;
+  margin: 0px;
+  align-content: center;
+}
+
+.chat-side-list .chat-side-items {
+  height: 90%;
+}
+
+.chat-list-tile {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 16px 0px;
+}
+
+.chat-screen .chat-header {
+  height: 8%;
+  display: flex;
+  padding: 16px;
+  flex-direction: row;
+  border-bottom: solid 1px gray;
+  align-content: center;
+}
+
+.chat-screen .chat-body {
+  height: 84%;
+  
+}
+.chat-screen .chat-footer {
+  height: 8%;
+  display: flex;
+  padding: 16px;
+  border-top: solid 1px gray;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.chat-text-field {
+  flex: 1;
+  border: none;
+  background-color: transparent;
+
+}
+
+.message-container {
+  overflow: hidden;
+  height: 100%;
+}
+
+.message-list {
+  margin: 0;
+  padding: 10px 20px;
+  list-style-type: none;
+  text-align: left;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 100%;
+  
+}
+
+.message-tile {
+  padding: 10px;
+  background-color: rgb(31, 31, 31);
+  max-width: 60%;;
+  border-radius: 8px;
+}
+
+.chat-right {
+  align-self:flex-end;
+
+}
